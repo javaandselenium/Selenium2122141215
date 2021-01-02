@@ -11,7 +11,7 @@ public class Test2 {
 		System.setProperty("webdriver.chrome.driver", "./software/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://demo.actitime.com/login.do");
-		driver.findElement(By.cssSelector("input[id='username']")).sendKeys("admin");
+		driver.findElement(By.cssSelector("input[id='userna']")).sendKeys("admin");
 		driver.findElement(By.cssSelector("input[name='pwd']")).sendKeys("manager");
 	}
 
