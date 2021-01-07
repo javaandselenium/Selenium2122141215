@@ -18,9 +18,10 @@ public class Test3 {
         driver.findElement(By.id("search_query_top")).sendKeys("dress");
 	driver.findElement(By.name("submit_search")).click();
 	Thread.sleep(3000);
+	//driver.findElement(By.xpath("(//a[@title='Printed Summer Dress'])[5]")).click();
 	driver.findElement(By.xpath("(//a[@title='Printed Summer Dress'])[5]")).click();
-	WebDriverWait w=new WebDriverWait(driver,3);
-	w.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Add to cart']"));
+//	WebDriverWait w=new WebDriverWait(driver,3);
+//	w.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Add to cart']"));
 	//driver.findElement(By.xpath("//span[text()='Add to cart']")).click();
 	}
 
