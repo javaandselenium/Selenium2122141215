@@ -6,23 +6,29 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Test0 {
+public class Test1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./software/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.ebay.com/");
-		WebElement ele = driver.findElement(By.id("gh-cat"));
+		driver.get("file:///C:/Users/QSP/Desktop/dd.html");
+		WebElement ele = driver.findElement(By.id("Mayas"));
 		Select s=new Select(ele);
-		s.selectByIndex(4);
+		s.selectByIndex(2);
+		s.selectByVisibleText("chicken 65");
+		s.selectByValue("i");
+		
+		s.deselectByIndex(2);
 		Thread.sleep(3000);
-		s.selectByValue("550");
+		s.deselectByValue("i");
 		Thread.sleep(3000);
-		s.selectByVisibleText("Business & Industrial");
+		s.deselectByVisibleText("chicken 65");
 		Thread.sleep(3000);
-		s.deselectAll();
 		driver.close();
 		
+		
+		
+
 	}
 
 }
