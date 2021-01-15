@@ -12,14 +12,15 @@ public class Test2 {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./software/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.amazon.com/");
-		WebElement ele = driver.findElement(By.xpath("//a[text()='Careers']"));
-         Point loc = ele.getLocation();
-         int x = loc.getX();
-         int y = loc.getY();
-         JavascriptExecutor j=(JavascriptExecutor) driver;
-         j.executeScript("window.scrollBy("+x+","+y+")");
-         ele.click();
+		driver.get("https://www.flipkart.com/");
+		driver.findElement(By.xpath("//button[text()='✕']")).click();
+//		WebElement ele = driver.findElement(By.xpath("//a[text()='Careers']"));
+//         Point loc = ele.getLocation();
+//         int x = loc.getX();
+//         int y = loc.getY();
+//         JavascriptExecutor j=(JavascriptExecutor) driver;
+//         j.executeScript("window.scrollBy("+x+","+y+")");
+//         ele.click();
          Thread.sleep(5000);
          driver.close();
          
