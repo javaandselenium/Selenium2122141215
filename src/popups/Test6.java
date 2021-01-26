@@ -27,19 +27,17 @@ public class Test6 {
 		r.keyRelease(KeyEvent.VK_CONTROL);
 		r.keyRelease(KeyEvent.VK_T);
 		
-		
-		for(String b1:child) {
-		driver.switchTo().window(b1);
 		Thread.sleep(5000);
+		for(String b:child) {
+			driver.switchTo().window(b);
+		}
 		
-			}
-		
-		
-		driver.get("https://www.amazon.com/");	
-		driver.findElement(By.xpath("//a[text()='Gift Cards']")).click();
-		driver.switchTo().window(parent);
-		driver.findElement(By.linkText("Forgotten password?")).click();
-		driver.quit();
+		Thread.sleep(5000);
+//		driver.get("https://www.amazon.com/");	
+//		driver.findElement(By.xpath("//a[text()='Gift Cards']")).click();
+//		driver.switchTo().window(parent);
+//		driver.findElement(By.linkText("Forgotten password?")).click();
+//		driver.quit();
 	}
 
 }
